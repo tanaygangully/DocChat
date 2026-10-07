@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100;
+}
+
+/* Markdown inside chat answers */
+.answer {
+  @apply text-[15px] leading-7;
+}
+.answer > * + * {
+  @apply mt-3;
+}
+.answer ul {
+  @apply list-disc space-y-1 pl-5;
+}
+.answer ol {
+  @apply list-decimal space-y-1 pl-5;
+}
+.answer strong {
+  @apply font-semibold;
+}
+.answer h1,
+.answer h2,
+.answer h3 {
+  @apply font-semibold;
+}
+.answer code {
+  @apply rounded bg-stone-200/70 px-1 py-0.5 font-mono text-[13px] dark:bg-stone-800;
+}
+.answer pre {
+  @apply overflow-x-auto rounded-lg bg-stone-200/70 p-3 dark:bg-stone-800;
+}
+.answer pre code {
+  @apply bg-transparent p-0;
+}
+.answer table {
+  @apply w-full border-collapse text-sm;
+}
+.answer th,
+.answer td {
+  @apply border border-stone-300 px-2 py-1 text-left dark:border-stone-700;
+}
