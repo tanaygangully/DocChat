@@ -1,7 +1,7 @@
 import { FileUp, MessagesSquare, Quote } from "lucide-react";
 import { redirect } from "next/navigation";
 import { Logo } from "@/components/logo";
-import { SignInButton } from "@/components/sign-in-button";
+import { AuthForm } from "@/components/auth-form";
 import { getCurrentUser } from "@/lib/auth";
 
 export default async function Home() {
@@ -21,7 +21,7 @@ export default async function Home() {
           Upload reports, papers or manuals. DocChat finds the passages that matter and answers only from
           them — with citations you can click to check.
         </p>
-        <SignInButton />
+        <AuthForm />
 
         <ul className="mt-8 grid w-full gap-4 sm:grid-cols-3">
           {[
